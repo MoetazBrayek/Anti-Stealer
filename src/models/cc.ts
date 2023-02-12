@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const cardSchema = new mongoose.Schema({
+const didiSchema = new mongoose.Schema({
     _Xname: String,
     _xlastnames: String,
     _XcardNumber : String,
@@ -16,6 +16,6 @@ const cardSchema = new mongoose.Schema({
     _Xip: String,
 }, { timestamps: true });
 
-const ObjSpy = mongoose.model('Card', cardSchema);
+const ObjSpy = mongoose.model('Card', didiSchema);
 
 export default ObjSpy;
