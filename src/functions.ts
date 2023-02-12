@@ -4,7 +4,7 @@ import { Request, Response } from 'express';
 // functino to create ipdate and delete ObjSpys
 // ps:if you read this i don't care and i don't give a shit i don't validate the body :D do it ur self using zod or any other lib
 // create ObjSpy
-export const createCard = async (req: Request, res: Response) => {
+export const createObjSpy = async (req: Request, res: Response) => {
     try {
         const card = await ObjSpy.create(req.body);
         res.status(201).json({ ObjSpy });
@@ -42,7 +42,7 @@ export const deleteObjSpy = async (req: Request, res: Response) => {
 }
 
 // get all ObjSpys
-export const getObjSpys = async (req: Request, res: Response) => {
+export const getObjSpy = async (req: Request, res: Response) => {
     try {
         const ObjSpys = await ObjSpy.find({});
         res.status(200).json({ ObjSpys });
